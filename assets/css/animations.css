@@ -1,0 +1,150 @@
+/* ===== Text Animation ===== */
+.animated-text span {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s forwards;
+}
+
+.animated-text span.text-first {
+    animation-delay: 0.5s;
+}
+
+.animated-text span.text-second {
+    animation-delay: 2s;
+}
+
+.animated-text span.text-third {
+    animation-delay: 3.5s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== Hero Content Animation ===== */
+.hero-content .subtitle {
+    animation: fadeIn 1s ease 0.3s both;
+}
+
+.hero-content .title {
+    animation: fadeIn 1s ease 0.6s both;
+}
+
+.hero-content .hero-description {
+    animation: fadeIn 1s ease 0.9s both;
+}
+
+.hero-content .hero-buttons {
+    animation: fadeIn 1s ease 1.2s both;
+}
+
+.hero-image {
+    animation: fadeInRight 1s ease 1s both;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ===== Section Animation ===== */
+.section-header {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease forwards;
+}
+
+.section:nth-child(odd) .section-header {
+    animation-delay: 0.3s;
+}
+
+.section:nth-child(even) .section-header {
+    animation-delay: 0.1s;
+}
+
+/* ===== Project Card Animation ===== */
+.project-card {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.project-card:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.project-card:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.project-card:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.project-card:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+.project-card:nth-child(5) {
+    animation-delay: 1s;
+}
+
+.project-card:nth-child(6) {
+    animation-delay: 1.2s;
+}
+
+/* ===== Skill Bar Animation ===== */
+.skill-level {
+    width: 0;
+    animation: fillWidth 1.5s ease forwards;
+}
+
+@keyframes fillWidth {
+    to {
+        width: attr(data-level);
+    }
+}
+
+/* ===== Floating Animation ===== */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.floating {
+    animation: float 6s ease-in-out infinite;
+}
+
+.floating-1 {
+    animation-delay: 0s;
+}
+
+.floating-2 {
+    animation-delay: 1s;
+}
+
+.floating-3 {
+    animation-delay: 2s;
+}
